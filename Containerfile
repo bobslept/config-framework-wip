@@ -6,6 +6,8 @@ RUN dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install
 COPY files/usr/etc/systemd /tmp/ublue-os/base-configs/usr/etc/systemd
 COPY files/usr/etc/tlp.d /tmp/ublue-os/base-configs/usr/etc/tlp.d
 
+RUN mkdir -p /tmp/ublue-os/rpmbuild/SOURCES/
+
 # Create archive of base configs
 RUN tar cf /tmp/ublue-os/rpmbuild/SOURCES/ublue-os-base-configs.tar.gz -C /tmp ublue-os/base-configs
 
