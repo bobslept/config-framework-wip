@@ -3,7 +3,7 @@ FROM registry.fedoraproject.org/fedora:latest AS builder
 RUN dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build systemd-rpm-macros
 
 # Copy base config files
-COPY files/usr/etc/systemd /tmp/ublue-os/base-configs/usr/etc/systemd
+COPY files/usr/lib/systemd /tmp/ublue-os/base-configs/usr/lib/systemd
 COPY files/usr/etc/tlp.d /tmp/ublue-os/base-configs/usr/etc/tlp.d
 
 RUN mkdir -p /tmp/ublue-os/rpmbuild/SOURCES/
