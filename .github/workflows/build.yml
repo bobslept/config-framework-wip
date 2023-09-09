@@ -1,7 +1,12 @@
 name: build-config-framework
 on:
+  push:
+    branches:
+      - main
   pull_request:
-  merge_group:  
+    branches:
+      - main
+  merge_group:
   schedule:
     - cron: '0 5 * * *'  # 5 am everyday
   workflow_dispatch:  
