@@ -1,4 +1,4 @@
-name: build-configs-framework
+name: build-config-framework
 on:
   pull_request:
   merge_group:  
