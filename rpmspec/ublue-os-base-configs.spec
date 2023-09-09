@@ -29,9 +29,9 @@ tar xf %{SOURCE0} -C %{buildroot} --strip-components=2
 
 %files
 %dir %attr(0755,root,root) %{_datadir}/%{VENDOR}/%{sub_name}
-%attr(0644,root,root) %{_datadir}/%{VENDOR}/%{sub_name}/%{_exec_prefix}/etc/systemd/system/fprintd.service
+%attr(0644,root,root) %{_datadir}/%{VENDOR}/%{sub_name}/%{_exec_prefix}/lib/systemd/system/fprintd.service
 %attr(0644,root,root) %{_datadir}/%{VENDOR}/%{sub_name}/%{_exec_prefix}/etc/tlp.d/50-framework.conf
-%attr(0644,root,root) %{_exec_prefix}/etc/systemd/system/fprintd.service
+%attr(0644,root,root) %{_exec_prefix}/lib/systemd/system/fprintd.service
 %attr(0644,root,root) %{_exec_prefix}/etc/tlp.d/50-framework.conf
 
 %changelog
