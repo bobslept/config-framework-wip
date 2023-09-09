@@ -1,7 +1,11 @@
 name: build-config-framework
 on:
-  pull_request:
   push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   merge_group:
   schedule:
     - cron: '0 5 * * *'  # 5 am everyday
